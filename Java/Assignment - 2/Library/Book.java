@@ -1,36 +1,43 @@
-package Library;
+// Java Program to Illustrate book Class that
+// takes Input from the books and related information
 
+package College;
+
+// Importing required classes
 import java.util.*;
 
-public class Book {
-    String bookName;
-    int bookID;
-    int bookQuantity;
-    String bookAuthor;
-    
-    void addNewBook(){
+// Class
+public class book {
 
-        //Scanner class Variable
-        Scanner sc = new Scanner(System.in);
+    // Class data members
+    public int sNo;
+    public String bookName;
+    public String authorName;
+    public int bookQty;
+    public int bookQtyCopy;
 
-        //Take book Name input from the user
-        System.out.print("Enter the name of the Book: ");
-        bookName = sc.next();
+    // Creating object of Scanner class to
+    // read input from users
+    Scanner input = new Scanner(System.in);
 
-        //Take BookID input from the user
-        System.out.print("Enter the book ID: ");
-        bookID = sc.nextInt();
+    // Method
+    // To add book details
+    public book() {
+        // Display message for taking input later
+        // taking input via
+        // nextInt() and nextLine() standard methods
+        System.out.println("Enter Serial No of Book:");
+        this.sNo = input.nextInt();
+        input.nextLine();
 
-        //Author of the book
-        System.out.print("Enter the name of the Author of " + bookName + ": ");
-        bookAuthor = sc.next();
+        System.out.println("Enter Book Name:");
+        this.bookName = input.nextLine();
 
-        //Take bookQuantity 
-        System.out.print("Number of " + bookName + " books in the library: ");
-        bookQuantity = sc.nextInt();
+        System.out.println("Enter Author Name:");
+        this.authorName = input.nextLine();
 
-        //Closing Input
-        sc.close();
-
+        System.out.println("Enter Quantity of Books:");
+        this.bookQty = input.nextInt();
+        bookQtyCopy = this.bookQty;
     }
 }
