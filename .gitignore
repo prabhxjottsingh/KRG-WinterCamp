@@ -2,3 +2,7 @@
 #compild files
 *.exe
 *.class
+
+# *.log 
+# *.sql
+# *.sqlite
