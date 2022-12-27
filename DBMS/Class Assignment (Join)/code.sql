@@ -1,18 +1,4 @@
 -- Exercise Link: https://www.w3resource.com/sql-exercises/sql-joins-exercises.php#h_one
-
-use mysql;
-
-create table salesman(
-salesman_id int,
-Sname varchar(50),
-city varchar(25),
-commission float(5,2),
-primary key(salesman_id) 
-);
-
-drop table salesman;
-
-
 --Solution 1
 SELECT
     salesman.name,
